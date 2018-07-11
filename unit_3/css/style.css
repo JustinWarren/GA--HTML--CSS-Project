@@ -1,0 +1,32 @@
+*{
+	padding:0;
+	margin: 0;
+}
+
+body {
+	background: #ccc;
+}
+
+p {
+	color:white;
+	font-size: 18px;
+	font-family: Helvetica;
+}
+
+h1 {
+	color:#fff;
+}
+
+h2 {
+	text-align: center;
+	font-family: Helvetica;
+}
+
+#slogan {
+	font-style:italic;
+}
+
+.header-image {
+	width:100%;
+}
+
