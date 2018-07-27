@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin|Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Cabin|Old+Standard+TT|Pacifico');
 /*
 font-family: 'Cabin', sans-serif; (Headings)
 font-family: 'Old Standard TT', serif; (Body Text)
+font-family: 'Pacifico', cursive; (Logo)
 */
 
-* {
+*{
 	padding:0;
 	margin: 0;
 }
@@ -25,9 +26,7 @@ a {
 	text-decoration: none;
 }
 
-h1 {
-	color:#fff;
-}
+
 
 h2 {
 	text-align: center;
@@ -36,26 +35,51 @@ h2 {
 }
 	
 
-.hero {
+#hero {
+	background-image: url("../images/coffee-shop.jpg");
 	width: 100%;
-	}
+	background-size: cover;
+}
+
+.logo {
+	font-family: 'Pacifico', cursive;
+	font-size: 2.5em;
+}
 
 .services {
-	border-color: blue;
-	border-width: 2px;
+	text-align: center;
+}
+
+.coffee {
+	margin: 25px;
+	border: 2px solid black;
+	padding: 20px;
+}
+
+.wholesale {
+	margin: 25px;
+	border: 2px solid black;
+	padding: 20px;
+}
+
+.mobile {
+	margin: 25px;
+	border: 2px solid black;
+	padding: 20px;
 }
 
 .seattle-pic {
 	width:300px;
-	height:300px;
+	border-radius: 3px;
 }
 
 .portland-pic {
 	width:300px;
-	height:300px;
+	border-radius: 3px;
 }
 
 .sanfran-pic {
 	width:300px;
-	height:300px;
+	border-radius: 3px;
 }
+
