@@ -37,59 +37,41 @@ h2 {
 	text-align: center;
 	font-family: 'Old Standard TT', serif;
 	font-size: 2em;
+	padding: 15px;
 }
 
-/*GA Assembly color info for showing blocks of content*/
-
-header {
-    background-color: #FFED74;
-    border: 1px black solid;
-    padding: 20px;
+nav a {
+	color:#fff;
+	font-size: 2em;
+	font-family:'Old Standard TT', serif;
+	text-shadow: 0 0 2px #fff;
+	padding-right: 10px;
+	margin: 10px;
 }
 
-nav {
-    background-color: #E8C66A;
-    border: 1px black solid;
-    padding: 20px;
-}
-/*
-aside {
-    background-color: #FFC675;
-    border: 1px black solid;
-    padding: 20px;
-}
-*/
-div {
-    background-color: #FFE2B8;
-    border: 1px black solid;
-    padding: 20px;
+/*LoVe HAte*/
+
+a:link {
 }
 
-section {
-    background-color: #FFE2B8;
-    border: 1px black solid;
-    padding: 20px;
-
-footer {
-    background-color: #FF957E;
-    border: 1px black solid;
-    padding: 20px;
+a:visited {
 }
-	
+
+a:hover {
+	border-bottom: 2px solid #fff;
+}
+
 
 #hero {
-	background-image: url("../images/coffee-shop.jpg");
-	width: 100%;
+	background-image: url("../images/barista.jpg");
+	height: 90vh;
 	background-size: cover;
+	box-sizing:border-box;
 }
 
 .logo {
 	font-family: 'Pacifico', cursive;
 	font-size: 2.5em;
-}
-
-.services {
-	text-align: center;
 }
 
 .coffee {
@@ -110,6 +92,20 @@ footer {
 	padding: 20px;
 }
 
+.services {
+	float: left;
+	width:25%;
+	margin:2.5%;
+	text-align: center;
+}
+
+
+.locations {
+	float: left;
+	width:25%;
+	margin:2.5%;
+}
+
 .seattle-pic {
 	width:300px;
 	border-radius: 3px;
@@ -127,19 +123,32 @@ footer {
 
 
 #two_column {
-	background-color: #FFB7CF;
-	border: 1px black solid;
 	padding: 20px;
 }
 
 #left {
-	background-color: #E582A2;
 	border: 1px black solid;
 	padding: 20px;
+	float:left;
+	width:30%;
 }
 
 #right {
-	background-color: #E55B88;
 	border: 1px black solid;
 	padding: 20px;
+	float: right;
+	width: 62%;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display:block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.footer {
+	padding: 10px;
 }
