@@ -10,6 +10,9 @@ font-family: 'Pacifico', cursive; (Logo)
 the content I want floated;*/
 
 
+/*NOTE: BEFORE DOING RESPONSIVE DESIGN I NEED TO GO AND CLEAN UP CODE.  LOOK FOR REDUNDANCIES
+AND ALSO ANYWHERE THAT PX ARE BEING USED.  CHANGE TO EM AND %*/
+
 *{
 	padding:0;
 	margin: 0;
