@@ -40,13 +40,13 @@ a {
 h2 {
 	text-align:center;
 	font-family: 'Old Standard TT', serif;
-	font-size: 2em;
+	font-size: 3em;
 	padding: 15px;
 }
 
 
 nav {
-	padding: 50px;
+	padding: 3.125em; /*50px*/
 	float: right;
 
 }
@@ -60,19 +60,19 @@ nav a {
 	font-size: 1.25em;
 	font-family:'Old Standard TT', serif;
 	text-shadow: 0 0 2px #fff;
-	padding: 5px;
-	margin: 10px;
+	padding: 0.3125em;/*5px*/
+	margin: 0.625em; /*10px*/
 	display: inline-block;
 }
 
 footer {
-	padding:10px;
+	padding:0.625em;/*10px*/
 	background-color:#000; 
 	color:#fff;
 }
 
 
-/*LoVe HAte*/
+/*LoVe HAte* - Link, visited, active, hover*/
 
 a:link {
 }
@@ -80,13 +80,12 @@ a:link {
 a:visited {
 }
 
-a:hover {
+nav a:hover {
 	border-bottom: 2px solid #fff;
 }
 
 
 #hero {
-	background: linear-gradient;
 	background-image: url("../images/barista.jpg");
 	height: 90vh;
 	background-size: cover;
@@ -95,42 +94,24 @@ a:hover {
 
 .logo {
 	font-family: 'Pacifico', cursive;
-	font-size: 3em;
-	padding: 20px 25px;
+	font-size: 2em;
+	padding:35px;
 	display: inline-block;
-	border: none;
+	border-bottom:none;
 }
 
 .products {
-	padding: 40px;
+	padding: 2.5em;/*40px*/
 }
 
 .stores {
-	padding: 40px;
+	padding: 2.5em;/*40px;*/
 }
 
 .about-blurb {
 	text-align:center;
-	padding: 50px;
+	padding: 3.125em;/*50px*/
 	margin: 0 auto;
-}
-
-.coffee {
-	margin: 25px;
-	border: 2px solid black;
-	padding: 20px;
-}
-
-.wholesale {
-	margin: 25px;
-	border: 2px solid black;
-	padding: 20px;
-}
-
-.mobile {
-	margin: 25px;
-	border: 2px solid black;
-	padding: 20px;
 }
 
 .services {
@@ -140,6 +121,9 @@ a:hover {
 	text-align:center;
 }
 
+.products-blurb {
+	padding: 20px 0;
+}
 
 .locations {
 	float: left;
@@ -148,34 +132,38 @@ a:hover {
 	text-align:center;
 }
 
+.locations-blurb{
+	padding:20px 0;
+}
+
 .address {
-	border-top: 2px solid black;
+	border-top: 2px solid white;
 	text-align: center;
 }
 
 .seattle-pic {
-	width:300px;
+	width:100%;
 	border-radius: 3px;
 }
 
 .portland-pic {
-	width:300px;
+	width:100%;
 	border-radius: 3px;
 }
 
 .sanfran-pic {
-	width:300px;
+	width:100%;
 	border-radius: 3px;
 }
 
 
 #two_column {
-	padding: 20px;
+	padding: 1.25em; /*20px*/
 }
 
 #left {
-	border: 1px solid black;
-	padding: 20px;
+	/*border: 1px solid black;*/
+	padding: 1.25em; /*20px*/
 	float:left;
 	width:30%;
 }
@@ -185,13 +173,13 @@ a:hover {
 }
 
 .hq-info {
-	padding-top: 10px
+	padding-top: 0.625em;/*10px*/  
 	color:#000;
 }
 
 #right {
-	border: 1px solid black;
-	padding: 25px;
+	/*border: 1px solid black;*/
+	padding: 1.5625em;/*25px;*/
 	float: right;
 	width: 62%;
 }
@@ -205,3 +193,86 @@ a:hover {
 	height: 0;
 }
 
+/**********MEDIA QUERIES*************/
+
+/*This means that if the screen is 780px or LESS then these changes apply*/
+@media screen and (max-width: 1215px) {
+	#left {
+	float:none;
+	margin: 0 auto;
+	}
+
+	#right {
+	float: none;
+	margin: 0 auto;	
+	}
+}
+
+/****At 950px this will make the the content blurbs a smaller font***/
+@media screen and (max-width: 950px) {
+	.locations-blurb{
+	font-size:1.15em;
+	}
+	.products-blurb {
+	font-size:1.15em;
+	}
+	h2 {
+	padding:1.15em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.logo {
+	display: block;
+	text-align: center;
+	font-size:2.5em;
+	}
+	nav {
+		float:none;
+		padding:0px;
+	}
+	nav a {
+		display:block;
+		text-align: center;
+	}
+
+	.stores {
+		padding: 0 40px 40px 40px;
+	}
+	.products {
+		padding: 0 40px 40px 40px;
+	}
+	#left {
+		border:none;
+		background:#fff;
+		width:100%;
+	}
+	#right{
+		border:none;
+		width:100%;
+	}
+	#two_column {
+		padding:0px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.services {
+		float:none;
+		width:100%;
+	}
+	.locations {
+		float:none;
+		width:100%;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	#hero {
+		background-image: none;
+		height:100vh;
+	}
+	.address {
+		font-size:1em;
+	}
+}
