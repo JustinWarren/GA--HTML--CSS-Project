@@ -137,8 +137,9 @@ nav a:hover {
 }
 
 .address {
-	border-top: 2px solid white;
+	/*border-top: 2px solid white;*/
 	text-align: center;
+	padding-top:10px;
 }
 
 .seattle-pic {
@@ -221,7 +222,7 @@ nav a:hover {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 	.logo {
 	display: block;
 	text-align: center;
@@ -266,6 +267,14 @@ nav a:hover {
 		width:100%;
 	}
 }
+
+@media screen and (max-width: 442px) {
+	h2 {
+		padding: 0px;
+	}
+}
+
+
 
 @media screen and (max-width: 375px) {
 	#hero {
