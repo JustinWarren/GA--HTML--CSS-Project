@@ -13,22 +13,26 @@ the content I want floated;*/
 /*NOTE: BEFORE DOING RESPONSIVE DESIGN I NEED TO GO AND CLEAN UP CODE.  LOOK FOR REDUNDANCIES
 AND ALSO ANYWHERE THAT PX ARE BEING USED.  CHANGE TO EM AND %*/
 
+
+
+/**********MAIN STYLES**********/
 *{
 	padding:0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-	background: #ccc;
+	background: #fff;
 	font-size: 1em; /*1 em= 16px*/
 }
 
 p {
-	color:white;
+	color:darkblue;
 	font-size: 1.25em;
 	font-family: 'Cabin', sans-serif;
 	line-height: 1.5em;
-	max-width: 40em;
+	max-width: 45em;
 }
 
 a {
@@ -46,13 +50,9 @@ h2 {
 
 
 nav {
-	padding: 3.125em; /*50px*/
+	padding: 55px; /*50px*/
 	float: right;
 
-}
-
-header {
-	background-color: #404040;
 }
 
 nav a {
@@ -61,8 +61,12 @@ nav a {
 	font-family:'Old Standard TT', serif;
 	text-shadow: 0 0 2px #fff;
 	padding: 0.3125em;/*5px*/
-	margin: 0.625em; /*10px*/
+	margin: 10px; /*10px*/
 	display: inline-block;
+}
+
+header {
+	background-color: #404040;
 }
 
 footer {
@@ -71,6 +75,8 @@ footer {
 	color:#fff;
 }
 
+
+/**********ANCHOR LINK STYLINGS***********/
 
 /*LoVe HAte* - Link, visited, active, hover*/
 
@@ -81,7 +87,7 @@ a:visited {
 }
 
 nav a:hover {
-	border-bottom: 2px solid #fff;
+	text-decoration: underline;
 }
 
 
@@ -92,26 +98,25 @@ nav a:hover {
 	box-sizing:border-box;
 }
 
+
+/**********CLASS STYLES**********/
 .logo {
 	font-family: 'Pacifico', cursive;
 	font-size: 2em;
-	padding:35px;
+	padding:55px;
 	display: inline-block;
 	border-bottom:none;
-}
-
-.products {
-	padding: 2.5em;/*40px*/
-}
-
-.stores {
-	padding: 2.5em;/*40px;*/
 }
 
 .about-blurb {
 	text-align:center;
 	padding: 3.125em;/*50px*/
 	margin: 0 auto;
+	width:100%;
+}
+
+.products {
+	padding: 2.5em;/*40px*/
 }
 
 .services {
@@ -125,21 +130,15 @@ nav a:hover {
 	padding: 20px 0;
 }
 
+.stores {
+	padding: 2.5em;/*40px;*/
+}
+
 .locations {
 	float: left;
 	width:28.33%;
 	margin:2.5%;
-	text-align:center;
-}
-
-.locations-blurb{
-	padding:20px 0;
-}
-
-.address {
-	/*border-top: 2px solid white;*/
-	text-align: center;
-	padding-top:10px;
+	text-align:left;
 }
 
 .seattle-pic {
@@ -157,9 +156,19 @@ nav a:hover {
 	border-radius: 3px;
 }
 
+.address {
+	/*border-top: 2px solid white;*/
+	text-align: center;
+	padding-top:10px;
+}
+
+.locations-blurb{
+	padding:20px 0;
+}
 
 #two_column {
 	padding: 1.25em; /*20px*/
+	background-color: #DEDEDE;
 }
 
 #left {
@@ -173,16 +182,21 @@ nav a:hover {
 	text-align:center;
 }
 
-.hq-info {
-	padding-top: 0.625em;/*10px*/  
-	color:#000;
-}
-
 #right {
 	/*border: 1px solid black;*/
 	padding: 1.5625em;/*25px;*/
 	float: right;
 	width: 62%;
+}
+
+.hq-info {
+	padding-top: 0.625em;/*10px*/  
+	color:#000;
+}
+
+
+.footer {
+	color:#fff;
 }
 
 .clearfix:after {
@@ -194,7 +208,7 @@ nav a:hover {
 	height: 0;
 }
 
-/**********MEDIA QUERIES*************/
+/**********MEDIA QUERIES**********/
 
 /*This means that if the screen is 780px or LESS then these changes apply*/
 @media screen and (max-width: 1215px) {
@@ -222,6 +236,9 @@ nav a:hover {
 	}
 	.stores {
 		padding: 40px 40px 0px 40px;
+	}
+	#left {
+		padding:0;
 	}
 }
 
