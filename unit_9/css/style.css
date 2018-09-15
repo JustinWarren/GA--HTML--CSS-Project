@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Old+Standard+TT|Pacifico');
+/*
+font-family: 'Cabin', sans-serif; (Headings)
+font-family: 'Old Standard TT', serif; (Body Text)
+font-family: 'Pacifico', cursive; (Logo)
+*/
+
+
+/*Float notes:  Apply clearfix to the parent element of what I want to float.  Apply float to the parent of
+the content I want floated;*/
+
+
+/*NOTE: BEFORE DOING RESPONSIVE DESIGN I NEED TO GO AND CLEAN UP CODE.  LOOK FOR REDUNDANCIES
+AND ALSO ANYWHERE THAT PX ARE BEING USED.  CHANGE TO EM AND %*/
+
+
+
+/**********MAIN STYLES**********/
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	font-size: 1em; /*1 em= 16px*/
+}
+
+p {
+	color:darkblue;
+	font-size: 1.25em;
+	font-family: 'Cabin', sans-serif;
+	line-height: 1.5em;
+	max-width: 45em;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+h2 {
+	text-align:center;
+	font-family: 'Old Standard TT', serif;
+	font-size: 3em;
+	padding: 15px;
+}
+
+
+nav {
+	padding: 55px; /*50px*/
+	float: right;
+
+}
+
+nav a {
+	color:#fff;
+	font-size: 1.25em;
+	font-family:'Old Standard TT', serif;
+	text-shadow: 0 0 2px #fff;
+	padding: 0.3125em;/*5px*/
+	margin: 10px; /*10px*/
+	display: inline-block;
+}
+
+header {
+	background-color: #404040;
+}
+
+footer {
+	padding:0.625em;/*10px*/
+	background-color:#000; 
+	color:#fff;
+}
+
+
+/**********ANCHOR LINK STYLINGS***********/
+
+/*LoVe HAte* - Link, visited, active, hover*/
+
+a:link {
+}
+
+a:visited {
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+#hero {
+	background-image: url("../images/barista.jpg");
+	height: 90vh;
+	background-size: cover;
+	box-sizing:border-box;
+}
+
+.overlay{
+	background-color: rgba(34,78,135,.25);
+}
+
+/**********CLASS STYLES**********/
+.logo {
+	font-family: 'Pacifico', cursive;
+	font-size: 2em;
+	padding:55px;
+	display: inline-block;
+	border-bottom:none;
+}
+
+.about-blurb {
+	text-align:center;
+	padding: 3.125em;/*50px*/
+	margin: 0 auto;
+	width:100%;
+}
+
+.products {
+	padding: 2.5em;/*40px*/
+}
+
+.services {
+	float: left;
+	width:28.33%;
+	margin:2.5%;
+	text-align:center;
+}
+
+.products-blurb {
+	padding: 20px 0;
+}
+
+.stores {
+	padding: 2.5em;/*40px;*/
+}
+
+.locations {
+	float: left;
+	width:28.33%;
+	margin:2.5%;
+	text-align:left;
+}
+
+.seattle-pic {
+	width:100%;
+	border-radius: 3px;
+}
+
+.portland-pic {
+	width:100%;
+	border-radius: 3px;
+}
+
+.sanfran-pic {
+	width:100%;
+	border-radius: 3px;
+}
+
+.address {
+	/*border-top: 2px solid white;*/
+	text-align: center;
+	padding-top:10px;
+}
+
+.locations-blurb{
+	padding:20px 0;
+}
+
+#two_column {
+	padding: 1.25em; /*20px*/
+	background-color: #DEDEDE;
+}
+
+#left {
+	/*border: 1px solid black;*/
+	padding: 1.25em; /*20px*/
+	float:left;
+	width:30%;
+}
+
+.social-icons {
+	text-align:center;
+}
+
+#right {
+	/*border: 1px solid black;*/
+	padding: 1.5625em;/*25px;*/
+	float: right;
+	width: 62%;
+}
+
+.hq-info {
+	padding-top: 0.625em;/*10px*/  
+	color:#000;
+}
+
+
+.footer {
+	color:#fff;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display:block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+/**********MEDIA QUERIES**********/
+
+/*This means that if the screen is 780px or LESS then these changes apply*/
+@media screen and (max-width: 1215px) {
+	#left {
+	float:none;
+	margin: 0 auto;
+	}
+
+	#right {
+	float: none;
+	margin: 0 auto;	
+	}
+}
+
+/****At 950px this will make the the content blurbs a smaller font***/
+@media screen and (max-width: 950px) {
+	.locations-blurb{
+	font-size:1.15em;
+	}
+	.products-blurb {
+	font-size:1.15em;
+	}
+	h2 {
+	padding:1.15em;
+	}
+	.stores {
+		padding: 40px 40px 0px 40px;
+	}
+	#left {
+		padding:0;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.logo {
+	display: block;
+	text-align: center;
+	font-size:2.5em;
+	}
+	nav {
+		float:none;
+		padding:0px;
+	}
+	nav a {
+		display:block;
+		text-align: center;
+	}
+
+	.stores {
+		padding: 0 40px 40px 40px;
+	}
+	.products {
+		padding: 0 40px 40px 40px;
+	}
+	#left {
+		border:none;
+		background:#fff;
+		width:100%;
+	}
+	#right{
+		border:none;
+		width:100%;
+	}
+	#two_column {
+		padding:0px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.services {
+		float:none;
+		width:100%;
+	}
+	.locations {
+		float:none;
+		width:100%;
+	}
+}
+
+@media screen and (max-width: 442px) {
+	h2 {
+		padding: 0px;
+	}
+}
+
+
+@media screen and (max-width: 375px) {
+	#hero {
+		background-image: none;
+		height:100vh;
+	}
+	.address {
+		font-size:1em;
+	}
+}
