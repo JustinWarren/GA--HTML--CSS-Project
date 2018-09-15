@@ -90,7 +90,6 @@ nav a:hover {
 	text-decoration: underline;
 }
 
-
 #hero {
 	background-image: url("../images/barista.jpg");
 	height: 90vh;
@@ -98,6 +97,9 @@ nav a:hover {
 	box-sizing:border-box;
 }
 
+.overlay{
+	background-color: rgba(34,78,135,.25);
+}
 
 /**********CLASS STYLES**********/
 .logo {
